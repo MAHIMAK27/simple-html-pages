@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+<meta charset ="UTF-8">
+<meta name ="viewpoint" content="width=device=width,intial-scale=1.0">
+<title>calculator</title>
+<style>
+body{
+font-family:Arial,sans-serif;
+background-color:#f4f4f2;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100%;
+margin:0;
+}
+.calculator{
+background:#e73030;
+padding:20px;
+border-radius:10px;
+text-align:left;
+width:30%;
+}
+.calculator input{
+width:75%;
+margin:5px;
+padding:10px;
+font-size:16px;
+border-radius=5px;
+}
+.calculator button{
+width:100%;
+padding:10px;
+font-size:16px;
+margin-top:10px;
+background:#007BFF;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+.result{
+margin-top:15px;
+font-size:18px;
+color:red;
+}
+</style>
+</head>
+<body>
+<div class = "calculator">
+<h1>simple calculator</h1>
+<html>
+<head>
+<title>calc</title>
+</head>
+<body align="center">
+<input type ="number" name="num1" id="num1" placeholder="enter first number"> <br>
+<input type ="number" name="num2" id="num2" placeholder="enter second number"> <br>
+<button onclick="calculate('add')">addition</buttton><br>
+<button onclick="calculate('sub')">subtraction</buttton><br>
+<button onclick="calculate('mul')">multiplication</buttton><br>
+<button onclick="calculate('div')">division</buttton><br>
+<button onclick="calculate('power')">power</buttton><br>
+<button onclick="calculate('square')">square</buttton><br>
+<button onclick="calculate('sqrt')">sqrt</buttton><br>
+<button id ="result">result will be displayed here</button>
+<script>
+function calculate (operation)
+{
+	const n1 =Number(document.getElementById('num1').value);
+	const n2 =Number(document.getElementById('num2').value);
+	var result;
+	switch(operation)
+	{
+		case 'add':
+		result =n1+n2;
+		break;
+		case 'sub':
+		result = n1-n2;
+		break;
+		case 'mul':
+		result =n1*n2;
+		break;
+		case 'div':
+		result=n2!==0?n1/n2:"division by zero";
+		break;
+		case "power":
+		result=math.pow(n1,n2);
+		break;
+		default:
+		result="invalid operation";
+	}
+	document.getElementById('result').innerText=Result=${result};
+}
+</script>
+</body>
+</html>
